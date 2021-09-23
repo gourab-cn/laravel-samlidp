@@ -1,9 +1,9 @@
 <?php
 
-namespace CodeGreenCreative\SamlIdp\Http\Controllers;
+namespace DevGourab\SamlIdp\Http\Controllers;
 
 use Illuminate\Routing\Controller;
-use CodeGreenCreative\SamlIdp\Jobs\SamlSlo;
+use DevGourab\SamlIdp\Jobs\SamlSlo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 

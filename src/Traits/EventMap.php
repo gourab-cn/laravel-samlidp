@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeGreenCreative\SamlIdp\Traits;
+namespace DevGourab\SamlIdp\Traits;
 
 trait EventMap
 {
@@ -10,15 +10,15 @@ trait EventMap
      * @var array
      */
     protected $default_events = [
-        'CodeGreenCreative\SamlIdp\Events\Assertion' => [],
+        'DevGourab\SamlIdp\Events\Assertion' => [],
         'Illuminate\Auth\Events\Logout' => [
-            'CodeGreenCreative\SamlIdp\Listeners\SamlLogout',
+            'DevGourab\SamlIdp\Listeners\SamlLogout',
         ],
         'Illuminate\Auth\Events\Authenticated' => [
-            'CodeGreenCreative\SamlIdp\Listeners\SamlAuthenticated',
+            'DevGourab\SamlIdp\Listeners\SamlAuthenticated',
         ],
         'Illuminate\Auth\Events\Login' => [
-            'CodeGreenCreative\SamlIdp\Listeners\SamlLogin',
+            'DevGourab\SamlIdp\Listeners\SamlLogin',
         ],
     ];
 }

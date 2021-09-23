@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeGreenCreative\SamlIdp;
+namespace DevGourab\SamlIdp;
 
 /**
  * The service provider for laravel-samleidp
@@ -8,9 +8,9 @@ namespace CodeGreenCreative\SamlIdp;
  * @license MIT
  */
 
-use CodeGreenCreative\SamlIdp\Console\CreateCertificate;
-use CodeGreenCreative\SamlIdp\Console\CreateServiceProvider;
-use CodeGreenCreative\SamlIdp\Traits\EventMap;
+use DevGourab\SamlIdp\Console\CreateCertificate;
+use DevGourab\SamlIdp\Console\CreateServiceProvider;
+use DevGourab\SamlIdp\Traits\EventMap;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Blade;
@@ -125,7 +125,7 @@ class LaravelSamlIdpServiceProvider extends ServiceProvider
     {
         Route::name('saml.')
             ->prefix('saml')
-            ->namespace('CodeGreenCreative\SamlIdp\Http\Controllers')
+            ->namespace('DevGourab\SamlIdp\Http\Controllers')
             ->middleware('web')->group(function () {
                 $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
             });

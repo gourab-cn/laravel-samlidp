@@ -1,22 +1,9 @@
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/codegreencreative/laravel-samlidp.svg?style=flat-square)](https://packagist.org/packages/codegreencreative/laravel-samlidp)
-[![Total Downloads](https://img.shields.io/packagist/dt/codegreencreative/laravel-samlidp.svg?style=flat-square)](https://packagist.org/packages/codegreencreative/laravel-samlidp)
-
-[Buy me a coffee](https://www.buymeacoffee.com/upwebdesign) :coffee:
-
-# Laravel SAML IdP
-
-This package allows you to implement your own Identification Provider (idP) using the SAML 2.0 standard to be used with supporting SAML 2.0 Service Providers (SP).
-
-In this version we will be allowing for Laravel ^7.0 or ^8.0.
-
-If you are looking for Laravel ^5.6 see [v1.0](https://github.com/codegreencreative/laravel-samlidp/tree/1.0)
-
-If you are looking for Laravel ^6.0 use [v2.0](https://github.com/codegreencreative/laravel-samlidp/tree/2.0)
+* Thanks <a href="https://github.com/codegreencreative/laravel-samlidp">codegreencreative</a> for the awesome work. I fork this repo and configure it as per my requirement. 
 
 ## Installation
 
 ```shell
-composer require codegreencreative/laravel-samlidp
+composer require gourab-cn/laravel-samlidp
 ```
 
 # Configuration
@@ -148,7 +135,7 @@ This is because Laravel migrations, by default, only supply email and name field
 
 To add additional Claim Types, you can subscribe to the Assertion event:
 
-`CodeGreenCreative\SamlIdp\Events\Assertion`
+`DevGourab\SamlIdp\Events\Assertion`
 
 Subscribing to the Event:
 
@@ -159,7 +146,7 @@ protected $listen = [
     'App\Events\Event' => [
         'App\Listeners\EventListener',
     ],
-    'CodeGreenCreative\SamlIdp\Events\Assertion' => [
+    'DevGourab\SamlIdp\Events\Assertion' => [
         'App\Listeners\SamlAssertionAttributes'
     ]
 ];
@@ -174,7 +161,7 @@ namespace App\Listeners;
 
 use LightSaml\ClaimTypes;
 use LightSaml\Model\Assertion\Attribute;
-use CodeGreenCreative\SamlIdp\Events\Assertion;
+use DevGourab\SamlIdp\Events\Assertion;
 
 class SamlAssertionAttributes
 {
